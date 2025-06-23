@@ -1,0 +1,920 @@
+/* Import Google Fonts - Asegúrate de que esta línea esté al principio de tu archivo CSS */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&family=Montserrat:wght@400;500;700&display=swap');
+
+/* Basic Resets and Body Styles */
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif; /* Tipografía principal */
+    color: #f0f0f0; /* Letras blancas o muy claras por defecto */
+    line-height: 1.6;
+    background-color: #000; /* Fondo negro unificado para toda la página */
+}
+
+.clip {
+    overflow: hidden;
+}
+
+/* Containers */
+.w-container {
+    max-width: 960px; /* Ancho estándar del contenedor, ajusta si es necesario */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Navbar */
+.navbar-2 {
+    height: 40px;
+    padding: 20px 0;
+    background: linear-gradient(to bottom, #1a0000, #000); /* Degradado de rojo muy oscuro a negro */
+    box-shadow: 0 2px 5px rgba(255, 51, 51, 0.1); /* Sombra roja sutil */
+    position: fixed; /* Fijo para efecto 'sticky' */
+    width: 100%;
+    top: 0;
+    transform: translateY(-100%); /* Comienza fuera de pantalla */
+    transition: transform 0.3s ease-out; /* Transición suave para aparecer */
+    z-index: 1000;
+}
+
+/* Clase para mostrar la cabecera al hacer scroll (requiere JavaScript) */
+.navbar-2.show {
+    transform: translateY(0%);
+}
+
+.brand-2 {
+    display: inline-block;
+    padding: 10px 0;
+}
+
+.image-28 {
+    max-height: 50px; /* Ajustar tamaño del logo */
+    width: auto;
+    margin: -10px;
+}
+
+.link-block-3 {
+    float: right; /* Para posicionar el enlace de contacto a la derecha */
+    padding: 10px 20px;
+    background-color: transparent; /* Fondo invisible */
+    /* REMOVED: color: #FF4D4D; -- Permitimos que el color del texto sea manejado por sus propias clases */
+    border: 2px solid #800000; /* Borde rojo oscuro */
+    border-radius: 20px; /* Bordes redondeados */
+    text-decoration: none;
+    transition: all 0.3s ease; /* Transición para el hover */
+}
+
+.link-block-3:hover {
+    /* REMOVED: color: #fff; -- El color del texto ya será blanco por defecto o por sus clases */
+    background-color: #800000; /* Fondo rojo oscuro en hover */
+}
+
+/* ASEGURAMOS QUE EL TEXTO DENTRO DEL BOTÓN SIEMPRE SEA BLANCO */
+.text-block-5,
+.link-block-3 .text-span-3 { /* Apuntamos directamente al span dentro del link-block-3 */
+    font-weight: bold;
+    font-family: 'Kanit', sans-serif; /* Tipografía para el texto del botón de contacto */
+    color: #f0f0f0 !important; /* ¡Forzamos el color blanco y suprimimos otras reglas! */
+}
+
+
+/* Hero Section */
+.seccionhero {
+    position: relative;
+    padding: 80px 0;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #0a0a0a, #000); /* Degradado de negro muy oscuro a negro */
+}
+
+.blur {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.2; /* Ligeramente más opaco para los blurs */
+    filter: blur(80px);
+    z-index: 1;
+}
+
+.blur.yellow {
+    background-color: #bd0b0b; /* Tono rojo más suave */
+    width: 500px;
+    height: 500px;
+    top: 18%;
+    left: 8%;
+    
+}
+
+.blur._2 {
+    background-color: rgba(255, 102, 102, 0.2); /* Tono rojo suave para la segunda esfera blur */
+    width: 250px;
+    height: 250px;
+    bottom: 15%;
+    right: 10%;
+}
+
+.blur.white {
+    background-color: #c0abab; /* Tono rojo más suave */
+    width: 200px;
+    height: 100px;
+    top: 10%;
+    left: 5%;
+}
+
+
+.blur.white-2{
+    background-color: #c0abab; /* Tono rojo más suave */
+    width: 200px;
+    height: 100px;
+    bottom: 69%;
+    left: 75%;
+}
+
+.blur.white-3{
+    background-color: #c0abab; /* Tono rojo más suave */
+    width: 200px;
+    height: 100px;
+    bottom: 53%;
+    left: 11%;
+}
+
+.blur.white-4{
+    background-color: #c0abab; /* Tono rojo más suave */
+    width: 200px;
+    height: 110px;
+    top: 58%;
+    right: 4%;
+}
+
+
+
+
+.container-15 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 2;
+}
+
+.image-27 {
+    max-width: 72%; /* Ancho de la imagen en hero */
+    height: 60%;
+    margin-right: 40px;
+    margin-left: -25%;
+    margin-top: 4%;
+}
+
+.wrap---text {
+    flex: 1;
+    text-align: left;
+}
+
+.heading {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    color: #ffffff; /* Letras blancas para el título principal */
+    font-family: 'Kanit', sans-serif; /* Tipografía para títulos */
+    line-height: 1.1;
+}
+
+.bold-text-5 {
+    font-weight: 800;
+}
+
+.paragraph {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: #ccc; /* Gris claro para el párrafo */
+}
+
+.text-span-35, .text-span-34 {
+    font-weight: bold;
+    color: #FF4D4D; /* Tono rojo para los spans destacados */
+}
+
+/* Button Modifications START */
+.link-block-2 {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(145deg, #1a0000, #000); /* Degradado de negro/rojo oscuro para el fondo */
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease-out;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 5px 15px rgba(255, 51, 51, 0.15); /* Sombra roja sutil */
+    cursor: pointer;
+    border: none;
+}
+
+.link-block-2:before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: inherit;
+    z-index: -1;
+    background: linear-gradient(90deg, #400000, #800000, #FF4D4D, #800000, #400000); /* Degradado de borde rojo animado */
+    background-size: 250% 100%;
+    background-position: 0% 0%;
+    transition: background-position 0.4s ease;
+}
+
+.link-block-2:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1); /* Efecto ripple blanco muy sutil */
+    border-radius: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: width 0.4s ease-out, height 0.4s ease-out, opacity 0.4s ease-out;
+    z-index: 0;
+}
+
+.link-block-2:hover {
+    transform: translateY(-3px) scale(1.01); /* Efecto sutil al pasar el mouse */
+    box-shadow: 0 8px 20px rgba(255, 51, 51, 0.25), 0 0 15px rgba(255, 51, 51, 0.1); /* Glow rojo sutil */
+}
+
+.link-block-2:hover:before {
+    background-position: -150% 0;
+}
+
+.link-block-2:active {
+    transform: translateY(0) scale(0.99); /* Efecto al hacer click */
+    box-shadow: 0 2px 5px rgba(255, 51, 51, 0.1);
+    background: linear-gradient(145deg, #2a0000, #0a0a0a); /* Ligeramente más oscuro al presionar */
+}
+
+.link-block-2:active:after {
+    width: 150%; /* Ripple más pequeño y visible */
+    height: 150%;
+    opacity: 0.7;
+}
+/* Button Modifications END */
+
+.text-block-2 {
+    text-align: center;
+}
+
+.contenedor---hero {
+    height: 0; /* Espacio reservado, ajustar si es necesario para el diseño */
+}
+
+/* Benefits Section */
+.benefits {
+    padding: 80px 0;
+    background: linear-gradient(to bottom, #1a0000, #000); /* Degradado oscuro para la sección */
+}
+
+.container-7, .container-8 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+
+.textwrapper {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.textwrapper._2 {
+    padding-left: 40px;
+    padding-right: 0;
+    order: 2;
+}
+
+.container-8 .image-29 {
+    order: 1;
+}
+
+.heading-2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #c0b9b9; /* Título rojo */
+    font-family: 'Kanit', sans-serif; /* Tipografía para títulos */
+}
+
+.paragraph-2 {
+    font-size: 1em;
+    color: #ccc; /* Gris claro para el párrafo */
+}
+
+.text-span-28, .text-span-29 {
+    font-weight: bold;
+    color: #FF4D4D; /* Acento rojo */
+}
+
+.imagben, .image-29 {
+    max-width: 40%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Sombra oscura */
+}
+
+/* "Estas en el lugar correcto si..." Section */
+.section {
+    padding: 80px 0;
+    background: linear-gradient(to bottom, #1a0000, #000); /* Degradado oscuro para la sección */
+}
+
+.container-17 {
+    text-align: center;
+}
+
+.heading-18 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+    color: #ffffff; /* Título rojo */
+    font-family: 'Kanit', sans-serif; /* Tipografía para títulos */
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.div-block-17 {
+    background: linear-gradient(145deg, #1a0000, #000); /* Degradado oscuro para las tarjetas de la grilla */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 51, 51, 0.08); /* Sombra roja sutil */
+    text-align: center;
+}
+
+.div-block-19 {
+    margin-bottom: 20px;
+}
+
+.icontisi {
+    max-width: 100px;
+    height: auto;
+    filter: brightness(0) invert(1) sepia(1) saturate(10000%) hue-rotate(-10deg); /* Tinte rojo a los iconos */
+    /* Nota: Esta es una forma de tintar PNGs blancos/grises. Si tus iconos tienen color,
+       necesitarás reemplazarlos con versiones rojas o usar un SVG para cambiar el color directamente. */
+}
+
+
+.heading-15 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #ffffff; /* Título blanco */
+    min-height: 3em;
+    font-family: 'Kanit', sans-serif; /* Tipografía para títulos */
+}
+
+.paragraph-17 {
+    font-size: 0.95em;
+    color: #ccc; /* Gris claro para el párrafo */
+}
+
+/* Details Section START */
+.detailssection {
+    position: relative;
+    padding: 80px 0;
+    background: linear-gradient(to bottom, #0a0a0a, #000); /* Degradado oscuro para la sección de detalles */
+    overflow: hidden;
+    color: #f8f8f8; /* Letras blancas */
+}
+
+.blurdetails.yellow {
+    background-color: rgba(255, 77, 77, 0.1); /* Rojo muy suave para los blurs */
+    filter: blur(80px);
+    opacity: 0.2; /* Más sutil */
+}
+
+.blurdetails.purpure {
+    background-color: rgba(128, 0, 0, 0.08); /* Rojo muy oscuro */
+    filter: blur(70px);
+    opacity: 0.15; /* Más sutil */
+}
+
+.detailssection:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    background-image:
+        radial-gradient(circle at 15% 25%, rgba(255, 77, 77, 0.05) 1px, transparent 1.5px),
+        radial-gradient(circle at 60% 80%, rgba(255, 77, 77, 0.08) 1.5px, transparent 2px),
+        radial-gradient(circle at 30% 70%, rgba(255, 77, 77, 0.03) 1px, transparent 1.5px),
+        radial-gradient(circle at 85% 10%, rgba(255, 77, 77, 0.06) 1.5px, transparent 2px),
+        radial-gradient(circle at 40% 40%, rgba(255, 77, 77, 0.04) 1px, transparent 1.5px),
+        radial-gradient(circle at 5% 90%, rgba(255, 77, 77, 0.05) 1px, transparent 1.5px),
+        radial-gradient(circle at 95% 50%, rgba(255, 77, 77, 0.07) 1.5px, transparent 2px);
+    background-size: 80px 80px, 120px 120px, 90px 90px, 100px 100px, 70px 70px, 110px 110px, 95px 95px;
+    background-repeat: repeat;
+    animation: moveParticleBackground 30s linear infinite;
+}
+
+@keyframes moveParticleBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100px 100px;
+    }
+}
+
+.wrapper-q-i-s {
+    position: relative;
+    z-index: 2;
+}
+/* Details Section END */
+
+.columnadetalles {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.columnadetalles._2 .column-3,
+.columnadetalles._4 .column-3 {
+    order: 2;
+    padding-left: 40px;
+    padding-right: 0;
+}
+
+.columnadetalles._2 .columna,
+.columnadetalles._4 .columna {
+    order: 1;
+    padding-right: 40px;
+    padding-left: 0;
+}
+
+.column-3, .columna {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.detalletext.left {
+    text-align: left;
+}
+
+.detalletext.right {
+    text-align: right;
+}
+
+.heading-6 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #c0b9b9; /* Título rojo */
+    font-family: 'Kanit', sans-serif; /* Tipografía para títulos */
+}
+
+.paragraph-6 {
+    font-size: 1em;
+    color: #ccc; /* Gris claro para el párrafo */
+}
+
+.image-15, .image-16, .image-17, .image-19 {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Sombra oscura */
+}
+
+.degradado {
+    background: linear-gradient(135deg, #400000, #000); /* Degradado de rojo oscuro a negro */
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 60px;
+    box-shadow: 0 5px 15px rgba(255, 51, 51, 0.1); /* Sombra roja sutil */
+}
+
+.heading-new {
+    font-size: 2.2em;
+    color: #ffffff; /* Letras blancas */
+    margin-bottom: 15px;
+    font-family: 'Kanit', sans-serif; /* Tipografía para títulos */
+}
+
+.paragraph-7 {
+    font-size: 1.1em;
+    color: #ccc; /* Gris claro */
+}
+
+.div-block-24 {
+    text-align: center;
+    padding: 60px 0;
+    background: linear-gradient(to bottom, #1a0000, #000); /* Degradado oscuro */
+    margin-top: 60px;
+    border-radius: 10px;
+}
+
+.heading-23 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #c0b9b9; /* Título rojo */
+    font-family: 'Kanit', sans-serif; /* Tipografía para títulos */
+}
+
+.text-block-6 {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #ccc; /* Gris claro */
+}
+
+/* Know Me Section */
+.know-me {
+    padding: 80px 0;
+    background: linear-gradient(to bottom, #1a0000, #000); /* Degradado oscuro */
+}
+
+.container-12 {
+    display: flex;
+    align-items: center;
+}
+
+.columns-2 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.column-4, .column-5 {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.image-21 {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Sombra oscura */
+}
+
+.heading-8 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #c0b9b9; /* Título rojo */
+    font-family: 'Kanit', sans-serif; /* Tipografía para títulos */
+}
+
+.paragraph-8 {
+    font-size: 1em;
+    color: #ccc; /* Gris claro */
+}
+
+.text-span-18, .text-span-12, .text-span-36, .text-span-37, .text-span-40, .text-span-38 {
+    font-weight: bold;
+    color: #FF4D4D; /* Acento rojo */
+}
+
+/* Testimony Section */
+.testimony {
+    padding: 80px 0;
+    background: linear-gradient(to bottom, #1a0000, #000); /* Degradado oscuro */
+}
+
+.container-10 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.testimonys {
+    display: flex;
+    gap: 30px;
+    flex: 1;
+    margin-right: 40px;
+}
+
+.degradatebox {
+    background: linear-gradient(135deg, #400000, #1a0000); /* Degradado rojo oscuro */
+    padding: 5px;
+    border-radius: 10px;
+    flex: 1;
+}
+
+.box {
+    background-color: #0a0a0a; /* Negro muy oscuro para las cajas internas */
+    padding: 30px;
+    border-radius: 8px;
+    height: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 2px 8px rgba(255, 51, 51, 0.05); /* Sombra roja muy sutil */
+}
+
+.image-22 {
+    max-width: 80px;
+    margin-bottom: 15px;
+    filter: brightness(0) invert(1) sepia(1) saturate(10000%) hue-rotate(-10deg); /* Tinte rojo a las estrellas (si son grises/blancas) */
+}
+
+.paragraph-10 {
+    font-size: 0.95em;
+    color: #ccc; /* Gris claro */
+    margin-bottom: 15px;
+}
+
+.paragraph-11 {
+    font-weight: bold;
+    color: #ffffff; /* Letras blancas */
+    font-size: 1.1em;
+}
+
+.text-testimony {
+    text-align: right;
+    flex-shrink: 0;
+    width: 300px;
+}
+
+.heading-9 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #c0b9b9; /* Título rojo */
+    font-family: 'Kanit', sans-serif; /* Tipografía para títulos */
+}
+
+.paragraph-9 {
+    font-size: 1em;
+    color: #ccc; /* Gris claro */
+}
+
+/* Next Step Section */
+.nextstep {
+    padding: 80px 0;
+    background: linear-gradient(to bottom, #1a0000, #000); /* Degradado oscuro */
+    text-align: center;
+}
+
+.container-11 {
+    margin-bottom: 40px;
+}
+
+.heading-11 {
+    font-size: 2.8em;
+    margin-bottom: 15px;
+    color: #c0b9b9; /* Título rojo */
+    font-family: 'Kanit', sans-serif; /* Tipografía para títulos */
+}
+
+.paragraph-13 {
+    font-size: 1.1em;
+    color: #ccc; /* Gris claro */
+}
+
+.text-span-10 {
+    font-weight: bold;
+    color: #FF4D4D; /* Acento rojo */
+}
+
+.contactwrapper {
+    display: flex;
+    justify-content: center;
+}
+
+/* Button Modifications START */
+.link-block-2._90 {
+    width: 90%;
+    max-width: 400px;
+}
+
+.text-block-2.dudas {
+    padding: 15px 0;
+    font-family: 'Kanit', sans-serif; /* Tipografía para el texto del botón */
+    color: #ffffff; /* Letras blancas */
+}
+/* Button Modifications END */
+
+/* Footer */
+.footer {
+    background: linear-gradient(to bottom, #0a0a0a, #000); /* Degradado oscuro para el footer */
+    color: #f8f8f8; /* Letras blancas */
+    padding: 40px 0;
+}
+
+.footer-flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en pantallas pequeñas */
+    margin-bottom: 20px;
+}
+
+.footer-logo-link {
+    display: inline-block;
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+
+.footer-image {
+    max-height: 60px;
+    width: auto;
+    filter: brightness(0) invert(1) sepia(1) saturate(10000%) hue-rotate(-10deg); /* Tinte rojo al logo del footer */
+}
+
+.div-block, .div-block-2, .div-block-3 {
+    margin-bottom: 20px;
+}
+
+.w-list-unstyled {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-link {
+    color: #888; /* Gris más oscuro para los enlaces del footer */
+    text-decoration: none;
+    font-size: 0.95em;
+    margin-bottom: 10px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #FF4D4D; /* Rojo al pasar el mouse */
+}
+
+.text-block-3 {
+    text-align: center;
+    font-size: 0.85em;
+    color: #666; /* Gris aún más oscuro */
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 991px) {
+    .container-15, .container-7, .container-8, .container-10, .columns-2 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-27, .imagben, .image-29, .image-21 {
+        max-width: 80%;
+        margin-bottom: 40px;
+        margin-right: 0;
+    }
+
+    .wrap---text, .textwrapper, .column-4, .column-5 {
+        padding: 0;
+    }
+
+    .textwrapper._2 {
+        padding: 0;
+        order: unset;
+    }
+
+    .container-8 .image-29 {
+        order: unset;
+    }
+
+    .columnadetalles {
+        flex-direction: column;
+    }
+
+    .columnadetalles._2 .column-3,
+    .columnadetalles._4 .column-3,
+    .columnadetalles._2 .columna,
+    .columnadetalles._4 .columna {
+        order: unset;
+        padding: 0;
+    }
+
+    .detalletext.right {
+        text-align: center;
+    }
+
+    .testimonys {
+        flex-direction: column;
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
+
+    .text-testimony {
+        text-align: center;
+        width: auto;
+    }
+
+    .footer-flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo-link {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .heading {
+        font-size: 2.5em;
+    }
+    .heading-2, .heading-9, .heading-11, .heading-23 {
+        font-size: 2em;
+    }
+    .heading-18 {
+        font-size: 2.2em;
+    }
+    .heading-6 {
+        font-size: 1.5em;
+    }
+    .paragraph, .paragraph-2, .paragraph-6, .paragraph-7, .paragraph-8, .paragraph-9, .paragraph-10, .paragraph-13 {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .heading {
+        font-size: 2em;
+    }
+    .heading-2, .heading-9, .heading-11, .heading-23 {
+        font-size: 1.8em;
+    }
+    .heading-18 {
+        font-size: 2em;
+    }
+    .heading-6 {
+        font-size: 1.3em;
+    }
+    .link-block-2 {
+        padding: 12px 25px;
+        font-size: 0.9em;
+    }
+    .link-block-3 {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}
+
+/* Añade o modifica estas reglas en tu archivo style.css */
+
+.container-13 {
+    display: flex;
+    justify-content: space-between; /* Esto distribuye los elementos a los extremos y el centro */
+    align-items: center; /* Centra verticalmente los elementos */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    max-width: 960px; /* O el ancho máximo que uses en tu diseño */
+    margin: 0 auto; /* Centra el contenedor si no está ya centrado */
+    padding: 15px 20px; /* Espaciado interno */
+}
+
+.agency-name {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 2.5em; /* Aumentamos el tamaño para mayor impacto */
+    font-weight: 900; /* Hacemos el texto más audaz */
+    color: #beb7b744; /* Color principal del texto: Blanco */
+    margin-top: -2%;
+    /* Tipografía moderna y impactante */
+        font-family: monospace;
+    text-shadow:
+        -1px -1px 0 #e1e6de,  /* Borde rojo */
+         1px -1px 0 #7a4545,
+        -1px 1px 0 #746e6e,
+         1px 1px 0 #000000,
+         2px 2px 0 #000000, /* Sombra/borde negro para profundidad */
+         3px 3px 0 #000000,
+         4px 4px 0 #000000;
+    letter-spacing: 3px; /* Aumentamos el espaciado entre letras */
+    text-transform: uppercase; /* Convertir a mayúsculas */
+}
+
+/* Si tu logo o el botón de contacto tienen un ancho fijo, puedes ajustarlos */
+.brand-2 {
+    /* Puede que necesites ajustar el margen o el tamaño si se superpone con el texto central */
+    margin-top: -2%;
+    margin-right: 15px; /* Espacio a la derecha del logo */
+}
+
+.link-block-3 {
+    /* Puede que necesites ajustar el margen o el tamaño si se superpone con el texto central */
+    margin-left: 15px; /* Espacio a la izquierda del botón */
+    margin-top: -2%;
+}
+
+/* Para dispositivos móviles, podrías ajustar la disposición si el texto es muy largo */
+@media screen and (max-width: 767px) {
+    .container-13 {
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan si no hay espacio */
+        justify-content: center; /* Centra los elementos cuando se envuelven */
+    }
+    .agency-name {
+        width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+        order: -1; /* Mueve el nombre de la agencia arriba en el orden visual */
+        margin-bottom: 10px; /* Espacio debajo del nombre de la agencia */
+    }
+    .brand-2, .link-block-3 {
+        margin: 0 10px; /* Ajusta los márgenes en móviles */
+    }
+}
